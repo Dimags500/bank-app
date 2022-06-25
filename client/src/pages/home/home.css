@@ -1,0 +1,6 @@
+.users-container{
+    display: flex;
+    margin: 5px;
+    flex-wrap: wrap;
+    gap: 5px;
+}

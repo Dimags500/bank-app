@@ -1,6 +1,8 @@
 
 import {useState, useEffect}from 'react' ;
-import {getAllUsers} from '../../services/users.service'
+import  User  from '../../components/user/User';
+import {getAllUsers} from '../../services/users.service' ;
+import'./home.css'
 
 function Home() {
 
@@ -30,8 +32,8 @@ function Home() {
 
 
   return (
-    <div >
-        {loading ? <h2>Loading</h2> : users.map(item => <p key={item._id}>{item.age}</p>)}
+    <div  className='container users-container '>
+        {loading ? <h2>Loading</h2> : users.map(item => <User key={item._id} data={item} /> )}
     </div>
   );
 } 
